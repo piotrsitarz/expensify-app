@@ -8,6 +8,7 @@ import getVisibleExpenses from './selectors/expenses';
 import axios from 'axios';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+import registerServiceWorker from './components/registerServiceWorker';
 
 const fecthExpenses =  () => {
   axios.get('/expenses_list')
@@ -25,3 +26,4 @@ const jsx = (
 );
 
 ReactDOM.render(jsx, document.getElementById('app'));
+registerServiceWorker();
